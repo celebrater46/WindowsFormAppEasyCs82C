@@ -23,7 +23,7 @@ namespace WindowsFormsAppEasyCs82C
             this.ClientSize = new Size(400, 300);
             this.BackColor = Color.Black;
 
-            this.Paint += new PaintEventHandler();
+            this.Paint += new PaintEventHandler(FormPaint);
         }
 
         public void FormPaint(Object sender, PaintEventArgs e)
@@ -31,7 +31,7 @@ namespace WindowsFormsAppEasyCs82C
             Graphics g = e.Graphics;
             GraphicsPath gp = new GraphicsPath();
             
-            gp.AddEllipse(new Rectangle(0, 0, 400, 300)); // Adding Ellipse
+            gp.AddEllipse(new Rectangle(0, 0, 400, 300)); // The Picture appeared in the Circle
             Region rg = new Region(gp);
             g.Clip = rg;
             
